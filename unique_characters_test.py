@@ -2,7 +2,7 @@
 (What if you cannot use additional data structures?)"""
 
 import unittest
-from unique_characters import characters_are_unique, characters_are_unique2
+from unique_characters import characters_are_unique, characters_are_unique2, characters_are_unique3
 
 true_samples = ["", " 5\t", "a", "A", "aA", "Elizabeth", "Special.", "snowflake"]
 false_samples = ["!.!", "apple", " 5 ", "Special snowflake"]
@@ -32,6 +32,17 @@ class StringUniquenessTests(unittest.TestCase):
     def test_2_false(self):
         for sample in false_samples:
             boolean = characters_are_unique2(sample)
+            self.assertEqual(boolean, False)
+
+    def test_3_true(self):
+        for sample in true_samples:
+            test_count += 1
+            boolean = characters_are_unique3(sample)
+            self.assertEqual(boolean, True)
+
+    def test_3_false(self):
+        for sample in false_samples:
+            boolean = characters_are_unique3(sample)
             self.assertEqual(boolean, False)
 
 if __name__ == '__main__':
