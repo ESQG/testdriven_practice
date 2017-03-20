@@ -19,7 +19,7 @@ class PermutationMatchingTests(unittest.TestCase):
 
     def test_abba(self):
         boolean = are_permutations("ab", "ba")
-        self.assertEqual(boolean, False)
+        self.assertEqual(boolean, True)
 
     def test_elizabeth(self):
         boolean = are_permutations("elizabeth", "zithabeel")
