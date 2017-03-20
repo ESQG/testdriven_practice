@@ -13,7 +13,6 @@ class StringUniquenessTests(unittest.TestCase):
     def test_1_true(self):
         """All testcases that should return True, on the first function."""
         for sample in true_samples:
-            test_count += 1
             boolean = characters_are_unique(sample)
             self.assertEqual(boolean, True)
 
@@ -25,7 +24,6 @@ class StringUniquenessTests(unittest.TestCase):
 
     def test_2_true(self):
         for sample in true_samples:
-            test_count += 1
             boolean = characters_are_unique2(sample)
             self.assertEqual(boolean, True)
 
@@ -36,7 +34,6 @@ class StringUniquenessTests(unittest.TestCase):
 
     def test_3_true(self):
         for sample in true_samples:
-            test_count += 1
             boolean = characters_are_unique3(sample)
             self.assertEqual(boolean, True)
 
