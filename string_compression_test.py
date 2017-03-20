@@ -25,12 +25,15 @@ class CompressionTests(unittest.TestCase):
 
     def test_longer_then_shorter(self):
         sample = "abcaaaaaa"
-        self.assertEqual(compress(sample), "a1b1a6")
+        self.assertEqual(compress(sample), "a1b1c1a6")
 
     def test_repeated_bigram(self):
         sample = "ababababab"
         self.assertEqual(compress(sample), sample)
 
+    def test_double_digits(self):
+        sample = "aaaaaaaaaaaabc"
+        self.assertEqual(compress(sample), "a12b1c1")
 
 if __name__ == '__main__':
     unittest.main()
