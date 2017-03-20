@@ -2,6 +2,7 @@
 (What if you cannot use additional data structures?)"""
 
 import unittest
+from unique_characters import characters_are_unique, characters_are_unique2
 
 true_samples = ["", " 5\t", "a", "A", "aA", "Elizabeth", "Special.", "snowflake"]
 false_samples = ["!.!", "apple", " 5 ", "Special snowflake"]
