@@ -29,5 +29,13 @@ class PermutationMatchingTests(unittest.TestCase):
         boolean = are_permutations("elizabeth", "elizabth")
         self.assertEqual(boolean, False)
 
+    def test_spaces(self):
+        boolean = are_permutations("able was I er", "re I saw elba")
+        self.assertEqual(boolean, True)
+
+    def test_spaces2(self):
+        boolean = are_permutations("able was I ere", "I saw elereba")
+        self.assertEqual(boolean, False)
+
 if __name__ == '__main__':
     unittest.main()
